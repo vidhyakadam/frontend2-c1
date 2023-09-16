@@ -1,10 +1,7 @@
 const data = [
   { name: "john", age: 24, profession: "developer" },
   { name: "vira", age: 23, profession: "admin" },
-  { name: "aditya", age: 24, profession: "developer" },
-  { name: "ram", age: 27, profession: "admin" }, 
-  { name: "sonii", age: 24, profession: "developer" },
-  { name: "chotii", age: 24, profession: "admin" },
+  
 ];
 
 
@@ -30,7 +27,7 @@ function addData() {
 function removeAdmin() {
   const filteredPeople = data.filter(person => person.profession !== 'admin');
   data.length = 0; // Clear the original array
-  
+
   Array.prototype.push.apply(data, filteredPeople); // Copy back the filtered data
   console.log(data);
 
@@ -38,8 +35,8 @@ function removeAdmin() {
 
 // 4. Concatenate Array
 function concatenateArray() {
-  const array1 = [1,2,3];
-  const array2 = [4,5,6];
+  const array1 = [1, 2, 3];
+  const array2 = [4, 5, 6];
   const concatenatedArray = array1.concat(array2);
   console.log("Concatenated Array", concatenatedArray);
 
@@ -53,7 +50,7 @@ function averageAge() {
 }
 
 // 6. Age Check
- function checkAgeAbove25() {
+function checkAgeAbove25() {
   const isAbove25 = data.some(person => person.age > 25);
   console.log('Is there at least one person above 25?', isAbove25);
 }
@@ -75,7 +72,7 @@ function sortByAge() {
 function updateJohnsProfession() {
   const target_name = 'john';
   data.forEach((obj) => {
-    if(obj.name === target_name){
+    if (obj.name === target_name) {
       obj.profession = 'manager';
     }
   });
